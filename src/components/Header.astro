@@ -35,7 +35,7 @@ import dataverse_project_logo from "../assets/dataverse_project_logo.svg";
     position: sticky;
     top: 0;
     margin: 0;
-    padding: 0 1em;
+    padding: 0 4rem;
     background: white;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
@@ -46,7 +46,8 @@ import dataverse_project_logo from "../assets/dataverse_project_logo.svg";
     justify-content: space-between;
   }
   .internal-links a {
-    padding: 0.75em 0.5em;
+    padding: 1.25rem 0.75rem;
+    font-size: 1.1rem;
     color: var(--black);
     border-bottom: 4px solid transparent;
     text-decoration: none;
@@ -68,7 +69,12 @@ import dataverse_project_logo from "../assets/dataverse_project_logo.svg";
   .social-links,
   .social-links a {
     display: flex;
+    transition: all 0.2s ease-in-out;
   }
+  .social-links a:hover {
+    transform: scale(1.1);
+  }
+
   @media (max-width: 720px) {
     .social-links {
       display: none;
