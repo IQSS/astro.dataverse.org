@@ -1,0 +1,24 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import { render } from "astro:content";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+	const community = await getCollection("community");
+	return community.map((community) => ({
+		params: { slug: community.id },
+		props: community,
+	}));
+}
+type Props = CollectionEntry<"community">;
+
+const community = Astro.props;
+const { Content } = await render(community);
+---
+
+<MainLayout {...community.data}>
+	<h1 style={`view-transition-name: community-title-${community.id};`}>
+		{community.data.title}
+	</h1>
+	<Content />
+</MainLayout>

@@ -2,6 +2,8 @@
 title: "Features"
 ---
 
+# Features
+
 You are very welcome to try the Dataverse software at https://demo.dataverse.org or (for the brave of heart) https://beta.dataverse.org! The demo server runs our latest [release](https://github.com/IQSS/dataverse/releases) while the beta server runs unreleased software just merged [on GitHub](https://github.com/IQSS/dataverse).🚀
 
 ## Support for FAIR Data Principles
