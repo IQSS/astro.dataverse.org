@@ -33,6 +33,9 @@
 @view-transition {
 	navigation: auto;
 }
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-family: "Atkinson", sans-serif;
 	word-wrap: break-word;
@@ -58,6 +61,7 @@ h6 {
 	color: rgb(var(--black));
 	line-height: 1.2;
 	text-wrap: balance;
+	scroll-margin-top: 90px;
 }
 p,
 h1,

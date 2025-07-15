@@ -5,79 +5,79 @@ import dataverse_project_logo from "../assets/dataverse_project_logo.svg";
 ---
 
 <header>
-  <nav>
-    <a href="/" class="logo">
-      <img src={dataverse_project_logo.src} alt={SITE_TITLE} width="120" />
-    </a>
-    <div class="internal-links">
-      <HeaderLink href="/about">About</HeaderLink>
-      <HeaderLink href="/community">Community</HeaderLink>
-      <HeaderLink href="/features">Features</HeaderLink>
-      <HeaderLink href="/demo">Demo</HeaderLink>
-      <HeaderLink href="#download">Download</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
-    </div>
-    <div class="social-links">
-      <a href="https://github.com/IQSS/dataverse" target="_blank">
-        <span class="sr-only">Go to Dataverse GitHub repo</span>
-        <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32">
-          <path
-            fill="#303030"
-            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-          ></path>
-        </svg>
-      </a>
-    </div>
-  </nav>
+	<nav>
+		<a href="/" class="logo">
+			<img src={dataverse_project_logo.src} alt={SITE_TITLE} width="120" />
+		</a>
+		<div class="internal-links">
+			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/community">Community</HeaderLink>
+			<HeaderLink href="/features">Features</HeaderLink>
+			<HeaderLink href="/#try-the-dataverse-software">Demo</HeaderLink>
+			<HeaderLink href="/#installing-the-software">Download</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+		</div>
+		<div class="social-links">
+			<a href="https://github.com/IQSS/dataverse" target="_blank">
+				<span class="sr-only">Go to Dataverse GitHub repo</span>
+				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32">
+					<path
+						fill="#303030"
+						d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+					></path>
+				</svg>
+			</a>
+		</div>
+	</nav>
 </header>
 <style>
-  header {
-    position: sticky;
-    top: 0;
-    margin: 0;
-    padding: 0 4rem;
-    background: white;
-    box-shadow: 0 2px 8px rgba(var(--black), 5%);
-  }
+	header {
+		position: sticky;
+		top: 0;
+		margin: 0;
+		padding: 0 4rem;
+		background: white;
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+	}
 
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .internal-links a {
-    padding: 1.25rem 0.75rem;
-    font-size: 1.1rem;
-    color: var(--black);
-    border-bottom: 4px solid transparent;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-  }
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.internal-links a {
+		padding: 1.25rem 0.75rem;
+		font-size: 1.1rem;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+		transition: all 0.2s ease-in-out;
+	}
 
-  .internal-links a:hover {
-    border-bottom-color: var(--accent);
-  }
-  .internal-links a.active {
-    text-decoration: none;
-    border-bottom-color: var(--accent);
-  }
+	.internal-links a:hover {
+		border-bottom-color: var(--accent);
+	}
+	.internal-links a.active {
+		text-decoration: none;
+		border-bottom-color: var(--accent);
+	}
 
-  .logo {
-    display: grid;
-    place-items: center;
-  }
-  .social-links,
-  .social-links a {
-    display: flex;
-    transition: all 0.2s ease-in-out;
-  }
-  .social-links a:hover {
-    transform: scale(1.1);
-  }
+	.logo {
+		display: grid;
+		place-items: center;
+	}
+	.social-links,
+	.social-links a {
+		display: flex;
+		transition: all 0.2s ease-in-out;
+	}
+	.social-links a:hover {
+		transform: scale(1.1);
+	}
 
-  @media (max-width: 720px) {
-    .social-links {
-      display: none;
-    }
-  }
+	@media (max-width: 720px) {
+		.social-links {
+			display: none;
+		}
+	}
 </style>
