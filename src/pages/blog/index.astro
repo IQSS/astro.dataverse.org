@@ -29,7 +29,12 @@ const posts = (await getCollection("blog")).sort(
 										alt=""
 									/>
 								)}
-								<h4 class="title">{post.data.title}</h4>
+								<h4
+									class="title"
+									style={`view-transition-name: post-title-${post.id};`}
+								>
+									{post.data.title}
+								</h4>
 								<p class="date">
 									<FormattedDate date={post.data.pubDate} />
 								</p>
