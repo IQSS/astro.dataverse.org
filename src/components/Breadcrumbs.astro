@@ -1,0 +1,61 @@
+---
+interface Props {
+	currentPath: string;
+}
+
+const { currentPath } = Astro.props; // with leading '/'  e.g /cars/toyota/sedans/toyota-crown
+
+if (currentPath === "/") {
+	// Hide breadcrumbs on the homepage
+	return null;
+}
+// Split the pathname into segments
+const segments = currentPath.split("/").filter((segment) => segment !== "");
+
+let breadcrumbPaths: { name: string; path: string }[] = [];
+segments.reduce((acc, segment) => {
+	const newPath = `${acc}/${segment}`;
+	breadcrumbPaths.push({
+		name: segment,
+		path: newPath,
+	});
+	return newPath;
+}, "");
+---
+
+<nav aria-label="Breadcrumb">
+	<ol style="list-style: none; display: flex; gap: 0.5rem; padding: 0;">
+		<li><a href="/">Home</a></li>
+		{
+			breadcrumbPaths.map((breadcrumb, index) => {
+				const isLast = index === breadcrumbPaths.length - 1;
+				return (
+					<li>
+						<span>/</span>
+						{!isLast ? (
+							<a
+								href={breadcrumb.path}
+								class="breadcrumb-link"
+								aria-current={
+									index === breadcrumbPaths.length - 1 ? "page" : undefined
+								}
+							>
+								{breadcrumb.name}
+							</a>
+						) : (
+							<span class="breadcrumb-link" aria-current="page">
+								{breadcrumb.name}
+							</span>
+						)}
+					</li>
+				);
+			})
+		}
+	</ol>
+</nav>
+
+<style>
+	.breadcrumb-link {
+		text-transform: capitalize;
+	}
+</style>
